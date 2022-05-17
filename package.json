@@ -1,0 +1,20 @@
+{
+    "name": "smart-cube",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server/server.js",
+    "scripts": {
+        "start": "cd ./server && npm run start",
+        "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+        "install": "cd server && npm i && cd ../client && npm i && npm run build",
+        "build": "cd client && npm run build",
+        "seed": "cd server && npm run seed"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^5.1.0"
+    },
+    "dependencies": {}
+}

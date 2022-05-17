@@ -1,0 +1,33 @@
+{
+    "name": "smart-cube",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "seed": "node seeds/seed.js",
+        "watch": "nodemon server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "apollo-server-express": "^3.4.0",
+        "aws-sdk": "^2.1028.0",
+        "bcrypt": "^5.0.1",
+        "cors": "^2.8.5",
+        "crypto": "^1.0.1",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "graphql": "^15.6.1",
+        "graphql-middleware": "^6.1.12",
+        "graphql-rate-limit": "^3.3.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.0.10",
+        "nodemailer": "^6.7.0",
+        "nodemailer-sendgrid-transport": "^0.2.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.13"
+    }
+}
