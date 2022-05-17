@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const preferenceSchema = new Schema({
+const deviceSchema = new Schema({
     minIrrigationIntervalInMinutes: {
         type: Number,
         require: true
@@ -32,6 +32,6 @@ const preferenceSchema = new Schema({
 })
 
 
-const Preference = model('Preferences',preferenceSchema);
+const Device = model('device',deviceSchema);
 
-module.exports = Preference;
+module.exports = Device;

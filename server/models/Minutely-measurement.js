@@ -9,6 +9,7 @@ const minutelyMeasurementSchema = new Schema({
     },
     capacity: {
         type: Number,
+        
         require: true
     },
     sensorName: {

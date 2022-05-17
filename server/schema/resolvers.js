@@ -57,7 +57,7 @@ const resolvers = {
             context,
             info
         ) => {
-            var args = { userId, username, email };
+            let args = { userId, username, email };
             //prevent users from doing this too frequently
             const errorMessage = await rateLimiter(
                 { parent, args, context, info },
@@ -119,7 +119,7 @@ const resolvers = {
             }
             //if both exist, verify email in mongodb
             userReturned.isVerified = true;
-            var updatedUser = await userReturned.save();
+            let updatedUser = await userReturned.save();
             if (!updatedUser) {
                 throw new AuthenticationError(
                     "There was an error verifying this email address."
@@ -150,7 +150,7 @@ const resolvers = {
             return { token, user };
         },
         forgotPassword: async (parent, { email }, context, info) => {
-            var args = { email };
+            let args = { email };
             const errorMessage = await rateLimiter(
                 { parent, args, context, info },
                 {
@@ -161,9 +161,9 @@ const resolvers = {
             );
             if (errorMessage) throw new AuthenticationError(errorMessage);
             //generate a 10 character random password
-            var newPw = generatePassword(10);
+            let newPw = generatePassword(10);
             //encrypt the new password for the database
-            var encryptedPw = bcrypt.hashSync(newPw, 10);
+            let encryptedPw = bcrypt.hashSync(newPw, 10);
             //find the user and update their passwords
             const user = await User.findOneAndUpdate(
                 { email },
@@ -218,7 +218,7 @@ const resolvers = {
                     );
                 }
                 //the existing password is correct, so take the new one and encrypt it
-                var encryptedPw = bcrypt.hashSync(newPassword, 10);
+                let encryptedPw = bcrypt.hashSync(newPassword, 10);
                 //update database with new encrypted password
                 const userUpdated = await User.findOneAndUpdate(
                     { email },
@@ -236,32 +236,7 @@ const resolvers = {
                 "You must be logged in to perform this action."
             );
         },
-        getS3Url: async (parent, { isLoggedIn }) => {
-            try {
-                //upload image file and return the new s3 URL
-                const url = s3.generateUploadURL();
-                const isLoggedInCheck = isLoggedIn;
-                return url;
-            } catch (error) {
-                throw new AuthenticationError(error.message);
-            }
-        },
-        getS3UrlAuthenticated: async (parent, { isLoggedIn }, context) => {
-            //ensure user is authenticated
-            if (context.user && isLoggedIn) {
-                try {
-                    //upload image file and return the new s3 URL
-                    const url = s3.generateUploadURL();
-                    return url;
-                } catch (error) {
-                    throw new AuthenticationError(error.message);
-                }
-            } else {
-                throw new AuthenticationError(
-                    "You must be logged in to perform this action."
-                );
-            }
-        },
+     
       
         removeUser: async (parent, { userId }) => {
             return User.findOneAndDelete({ _id: userId });

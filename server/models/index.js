@@ -5,8 +5,8 @@ const HourlyMeasurement = require("./Hourly-measurement");
 const MinutelyMeasurement= require("./Minutely-measurement");
 const SecondlyMeasurement = require("./Secondly-measurement");
 const Irrigation = require("./Irrigation");
-const Preferences = require("./Preferences");
-const WeatherData = require("./WeatherData");
+const Device = require("./Device");
+
 
 
 module.exports = { 
@@ -17,5 +17,5 @@ HourlyMeasurement,
 MinutelyMeasurement,
 SecondlyMeasurement,
 Irrigation,
-Preferences,
-WeatherData };
+Device
+};
