@@ -28,8 +28,7 @@ const typeDefs = gql`
         user(userId: ID!): User
     }
     type Mutation {
-        getS3Url(isLoggedIn: Boolean!): String!
-        getS3UrlAuthenticated(isLoggedIn: Boolean!): String!
+       
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
 
