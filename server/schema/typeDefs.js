@@ -64,8 +64,20 @@ type
             email: String!
         ): TokenEmailVerification
 
-       
-       
+        updateMoistureMeasurement {
+            timestamp: String!
+            capacity: Number!
+            sensorName: String!
+        }
+        updateDevice{
+            minIrrigationIntervalInMinutes: Number!
+            daysInterval: Number!
+            startTime :  String!
+            irrigationTimeInSeconds:Number!
+            capacityBuffer:Number!
+            sensorName: String!
+            signalPin: Number!
+        }
     }
 `;
 
