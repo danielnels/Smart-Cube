@@ -54,11 +54,7 @@ const Footer = ({ toTop }) => {
                                     }}
                                     onClick={toTop}
                                 >
-                                    <img
-                                        className="logo-sm"
-                                        src="/assets/images/logo-light.png"
-                                        alt="davidtunnell.com logo"
-                                    />
+                                    
                                 </Link>
                             </div>
                             <div className="col-md-5 text-center text-md-right"></div>

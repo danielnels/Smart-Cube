@@ -14,12 +14,12 @@ const Header = ({ toTop }) => {
                             <img
                                 className="navbar-logo navbar-logo-light"
                                 src="/assets/images/logo-light.png"
-                                alt="David Tunnell Logo"
+                                alt="smart-cube Logo"
                             />
                             <img
                                 className="navbar-logo navbar-logo-dark"
                                 src="/assets/images/logo-dark.png"
-                                alt="David Tunnell Logo"
+                                alt="smart-cube Logo"
                             />
                         </Link>
                         <button
