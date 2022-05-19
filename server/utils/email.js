@@ -2,7 +2,7 @@ const crypto = require("crypto");
 const nodemailer = require("nodemailer");
 const sendgridTransport = require("nodemailer-sendgrid-transport");
 const TokenEmailVerification = require("../models/TokenEmailVerification");
-
+require("dotenv").config();
 //create nodemailer transport with sendgrid api key
 const transporter = nodemailer.createTransport(
     sendgridTransport({

@@ -28,7 +28,7 @@ const HomeHero = (params) => {
                                 <div className="col-md-12 align-self-center text-center">
                                     <h1 className="display-2">
                                         <b>Smart Cube</b> a revolution 
-                                        in irrigation controll
+                                        in irrigation control
                                     </h1>
                                     <span className="p-1">
                                         <Link
