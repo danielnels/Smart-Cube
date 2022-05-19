@@ -29,7 +29,7 @@ const typeDefs = gql`
         sensorName: String
     }
 
-    Type Device{
+    type Device{
         minIrrigationIntervalInMinutes: Number
         daysInterval: Number
         startTime :  String
