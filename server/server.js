@@ -8,11 +8,10 @@ const { typeDefs, resolvers } = require("./schema");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
-
 const server = new ApolloServer({
     typeDefs,
     resolvers,
-    // Add context to our server so data from the `authMiddleware()` function can pass data to our resolver functions
+    
     context: authMiddleware,
 });
 server.start().then(() => {
@@ -20,12 +19,12 @@ server.start().then(() => {
 });
 
 app.use(cors());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 
 
-//debug how node will work in prod using http://localhost:3001
+
 app.use(express.static(path.join(__dirname, "../client/build")));
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname + "../../client/build/index.html"));
@@ -40,3 +39,9 @@ db.once("open", () => {
         );
     });
 });
+
+startApolloServer(typeDefs, resolvers);
+
+
+
+
