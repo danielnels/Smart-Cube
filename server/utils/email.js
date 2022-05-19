@@ -27,15 +27,15 @@ module.exports = {
         token,
         userId
     ) {
-        //heroku hack, for some reason it makes double slashes in prod but not in dev even working directly with node /3001 port
+       
         let slash = "";
         if (process.env.NODE_ENV !== "production") {
             slash = "/";
         }
         return {
-            from: "no-reply@upstudy.io",
+            from: "no-reply@smart-cube.io",
             to: email,
-            subject: "Upstudy - Account Verification Link",
+            subject: "Smart-Cube - Account Verification Link",
             text:
                 "Hello " +
                 username +
@@ -55,9 +55,9 @@ module.exports = {
     //create options object for password reset email
     generatePasswordResetEmailOptions: function (username, email, newPw) {
         return {
-            from: "no-reply@upstudy.io",
+            from: "no-reply@smart-cube.io",
             to: email,
-            subject: "Upstudy - Reset Password",
+            subject: "Smart-cube - Reset Password",
             text:
                 "Hello " +
                 username +
