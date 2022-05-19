@@ -38,7 +38,7 @@ const typeDefs = gql`
         sensorName: String
         signalPin: Number
     }
-type 
+
     type Query {
         users: [User]!
         user(userId: ID!): User
