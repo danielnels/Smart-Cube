@@ -110,17 +110,7 @@ export const USER_UPDATE_PASSWORD = gql`
     }
 `;
 
-export const GET_S3_URL = gql`
-    mutation Mutation($isLoggedIn: Boolean!) {
-        getS3Url(isLoggedIn: $isLoggedIn)
-    }
-`;
 
-export const GET_S3_URL_AUTHENTICATED = gql`
-    mutation Mutation($isLoggedIn: Boolean!) {
-        getS3UrlAuthenticated(isLoggedIn: $isLoggedIn)
-    }
-`;
 
 
 

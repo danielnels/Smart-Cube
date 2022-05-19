@@ -9,7 +9,7 @@ const {
     sendEmail,
     generatePassword,
 } = require("../utils/email");
-const s3 = require("../utils/s3");
+
 const { getGraphQLRateLimiter } = require("graphql-rate-limit");
 
 const rateLimiter = getGraphQLRateLimiter({ identifyContext: (ctx) => ctx.id });

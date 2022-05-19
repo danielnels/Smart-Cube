@@ -172,7 +172,7 @@ const VerifyEmail = (params) => {
                         ) : (
                             <div className="col-md-6 col-lg-4 text-white text-center">
                                 <h1>Your email address has been verified.</h1>
-                                <p>Thanks, let's do some learning!</p>
+                                <p>Get going and save some water!</p>
                                 <div className="mt-3">
                                     <Link to="/">
                                         <button
