@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const dailyMeasurementSchema = new Schema({
+const moistureMeasurementSchema = new Schema({
     timestamp: {
         type: Date,
         default: Date.now,
@@ -17,8 +17,8 @@ const dailyMeasurementSchema = new Schema({
 })
 
 
-const DailyMeasurement = model('Daily-measurement',dailyMeasurementSchema);
+const MoistureMeasurement = model('Moisture-measurement',moistureMeasurementSchema);
 
-module.exports = DailyMeasurement;
+module.exports = MoistureMeasurement;
 
 

@@ -23,10 +23,25 @@ const typeDefs = gql`
         user: User
         
     }
+    type MoistureMeasurement {
+        timestamp: String
+        capacity: Number
+        sensorName: String
+    }
+
+    Type Device{
+        minIrrigationIntervalInMinutes: Number
+        daysInterval: Number
+        startTime :  String
+        irrigationTimeInSeconds:Number
+        capacityBuffer:Number
+        sensorName: String
+        signalPin: Number
+    }
+type 
     type Query {
         users: [User]!
         user(userId: ID!): User
-
         moistureMeasurement(aggregateKey: String!): [MoistureMeasurement]
     }
     type Mutation {
