@@ -64,12 +64,14 @@ const typeDefs = gql`
             email: String!
         ): TokenEmailVerification
 
-        updateMoistureMeasurement {
+        updateMoistureMeasurement (
             timestamp: String!
             capacity: Number!
             sensorName: String!
-        }
-        updateDevice{
+
+        ):MoistureMeasurement
+        
+        updateDevice(
             minIrrigationIntervalInMinutes: Number!
             daysInterval: Number!
             startTime :  String!
@@ -77,7 +79,7 @@ const typeDefs = gql`
             capacityBuffer:Number!
             sensorName: String!
             signalPin: Number!
-        }
+        ):MoistureMeasurement
     }
 `;
 
