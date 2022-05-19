@@ -70,7 +70,7 @@ const typeDefs = gql`
             sensorName: String!
 
         ):MoistureMeasurement
-        
+
         updateDevice(
             minIrrigationIntervalInMinutes: Number!
             daysInterval: Number!
@@ -79,7 +79,7 @@ const typeDefs = gql`
             capacityBuffer:Number!
             sensorName: String!
             signalPin: Number!
-        ):MoistureMeasurement
+        ):Device
     }
 `;
 
