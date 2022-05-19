@@ -33,7 +33,7 @@ module.exports = {
             slash = "/";
         }
         return {
-            from: "no-reply@smart-cube.io",
+            from: "",
             to: email,
             subject: "Smart-Cube - Account Verification Link",
             text:
@@ -55,7 +55,7 @@ module.exports = {
     //create options object for password reset email
     generatePasswordResetEmailOptions: function (username, email, newPw) {
         return {
-            from: "no-reply@smart-cube.io",
+            from: "",
             to: email,
             subject: "Smart-cube - Reset Password",
             text:
