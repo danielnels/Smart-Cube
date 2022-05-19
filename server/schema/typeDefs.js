@@ -25,18 +25,18 @@ const typeDefs = gql`
     }
     type MoistureMeasurement {
         timestamp: String
-        capacity: Number
+        capacity: String
         sensorName: String
     }
 
     type Device{
-        minIrrigationIntervalInMinutes: Number
-        daysInterval: Number
+        minIrrigationIntervalInMinutes: String
+        daysInterval: String
         startTime :  String
-        irrigationTimeInSeconds:Number
-        capacityBuffer:Number
+        irrigationTimeInSeconds:String
+        capacityBuffer:String
         sensorName: String
-        signalPin: Number
+        signalPin: String
     }
 
     type Query {
@@ -66,19 +66,19 @@ const typeDefs = gql`
 
         updateMoistureMeasurement (
             timestamp: String!
-            capacity: Number!
+            capacity: String!
             sensorName: String!
 
         ):MoistureMeasurement
 
         updateDevice(
-            minIrrigationIntervalInMinutes: Number!
-            daysInterval: Number!
+            minIrrigationIntervalInMinutes: String!
+            daysInterval: String!
             startTime :  String!
-            irrigationTimeInSeconds:Number!
-            capacityBuffer:Number!
+            irrigationTimeInSeconds:String!
+            capacityBuffer:String!
             sensorName: String!
-            signalPin: Number!
+            signalPin: String!
         ):Device
     }
 `;

@@ -18,11 +18,8 @@ server.start().then(() => {
 });
 
 app.use(cors());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-
-
 
 app.use(express.static(path.join(__dirname, "../client/build")));
 app.get("*", (req, res) => {
@@ -35,11 +32,11 @@ db.once("open", () => {
         console.log(`API server running on port ${PORT}!`);
         console.log(
             `Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`
-        );
-    });
-});
+        )
+    })
+})
 
-startApolloServer(typeDefs, resolvers);
+
 
 
 
