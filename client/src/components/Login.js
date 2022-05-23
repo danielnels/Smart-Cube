@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useReducer } from "react";
 import { Link, useHistory } from "react-router-dom";
 import Auth from "../utils/auth";
-import { useMutation, useQuery } from "@apollo/client";
+import { useMutation,  } from "@apollo/client";
 import { USER_LOGIN, ADD_USER } from "../utils/mutations";
 import SimpleReactValidator from "simple-react-validator";
 import { useDispatch } from "react-redux";
