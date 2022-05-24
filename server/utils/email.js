@@ -55,15 +55,13 @@ module.exports = {
       subject: "Smart-cube - Reset Password",
       text:
         "Hello " +
-        username +
-        ",\n\n" +
-        "Your password has been changed to: " +
-        newPw +
-        "\n\n" +
-        "Click here to login: \n" +
-        process.env.APP_DOMAIN +
-        "/login" +
-        "\n\nThank You!\n",
+          username +
+          ",\n\n" +
+          "Your password has been changed to: " +
+          newPw +
+          "\n\n" +
+          "Click here to login: \n" +
+          process.env.APP_DOMAIN || "TEST" + "/login" + "\n\nThank You!\n",
     };
   },
   //send email with options provided
