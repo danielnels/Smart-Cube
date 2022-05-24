@@ -80,7 +80,7 @@ function App() {
                             <ForgotPassword bgColor={mainColor} />
                         </Route>
                        
-                        {/* dynamic generation of component routes from db source */}
+                        
                        
                         <Route path="/404">
                             <NotFound bgColor={mainColor} />
