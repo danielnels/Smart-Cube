@@ -4,7 +4,6 @@ import RadialCircle from "../LineChart/RadialCircle/RadialCircle";
 import "./WeatherMap.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import MoistureChart from "../LineChart/MoistureChart";
 
 function WeatherMap({ temperature, humidity }) {
   useEffect(() => {
@@ -17,10 +16,7 @@ function WeatherMap({ temperature, humidity }) {
         <LineChart />
         <h3>Date v/s Temperature</h3>
       </div>
-      <div className="Bottom" data-aos="zoom-in">
-        <MoistureChart />
-        <h3>Moisture Levels</h3>
-      </div>
+
       <div className="right" data-aos="zoom-in">
         <RadialCircle
           className="first"

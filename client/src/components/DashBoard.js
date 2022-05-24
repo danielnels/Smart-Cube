@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import HomeRight from "./HomeRight/HomeRight";
 import HomeLeft from "./HomeLeft/HomeLeft";
-import "./DashBoard.css";
+import "./Dashboard.css";
 require("dotenv").config();
 
 const API_KEY = process.env.WEATHER_API;
-const DashBoard = () => {
+const Dashboard = () => {
   const [temperature, setTemperature] = useState(0);
   const [humidity, setHumidity] = useState(0);
 
@@ -38,4 +38,4 @@ const DashBoard = () => {
   );
 };
 
-export default DashBoard;
+export default Dashboard;

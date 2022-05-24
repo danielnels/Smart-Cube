@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import InfoModal from "./components/InfoModal";
 import Home from "./components/Home";
-import DashBoard from "./components/DashBoard";
+import Dashboard from "./components/Dashboard";
 import NotFound from "./components/NotFound";
 import Login from "./components/Login";
 import VerifyEmail from "./components/VerifyEmail";
@@ -81,7 +81,7 @@ function App() {
 
             <Route exact path="/dashboard">
               {/* <ProtectedRoute> */}
-              <DashBoard bgColor={mainColor} />
+              <Dashboard bgColor={mainColor} />
               {/* </ProtectedRoute> */}
             </Route>
 

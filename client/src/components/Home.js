@@ -1,5 +1,4 @@
 import HomeHero from "./HomeHero";
-
 import useScrollToTop from "../utils/useScrollToTop";
 
 const Home = (params) => {
