@@ -146,7 +146,7 @@ const resolvers = {
     login: async (parent, { email, password }) => {
       //find user based on provided email
       const user = await User.findOne({ email });
-      //if it doesn't exist, let the user know in a generic message to prevent giving too much info to malicious actors
+      //if it doesn't exist, let the user know in a generic message to prevent giving too much info
       if (!user) {
         throw new AuthenticationError(
           "If the user you entered exists, you entered the wrong username and/or password."
