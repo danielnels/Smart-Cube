@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
-import "./LineChart.css";
-class LineChart extends Component {
+import "./MoistureData.css";
+class MoistureData extends Component {
   constructor(props) {
     super(props);
 
@@ -44,7 +44,7 @@ class LineChart extends Component {
           ],
           xaxis: [
             {
-              x: new Date("2 May 2022").getTime(),
+              x: new Date("24 May 2022").getTime(),
               borderColor: "#999",
               yAxisIndex: 0,
               label: {
@@ -67,7 +67,7 @@ class LineChart extends Component {
         },
         xaxis: {
           type: "datetime",
-          min: new Date("25 May 2022").getTime(),
+          min: new Date("24 May 2022").getTime(),
           tickAmount: 6,
         },
         tooltip: {
@@ -113,4 +113,4 @@ class LineChart extends Component {
   }
 }
 
-export default LineChart;
+export default MoistureData;

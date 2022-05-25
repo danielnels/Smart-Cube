@@ -4,7 +4,7 @@ import HomeLeft from "./HomeLeft/HomeLeft";
 import "./Dashboard.css";
 require("dotenv").config();
 
-const API_KEY = process.env.WEATHER_API;
+const API_KEY = "9d3f8d0c8e62e5ad4c7157553bc15108";
 const Dashboard = () => {
   const [temperature, setTemperature] = useState(0);
   const [humidity, setHumidity] = useState(0);
