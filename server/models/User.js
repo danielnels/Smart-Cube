@@ -19,7 +19,7 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  isVerified: { type: Boolean, default: false },
+  isVerified: { type: Boolean, default: true },
 });
 //use timestamp fields for this model
 userSchema.set("timestamps", true);
