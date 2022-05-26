@@ -1,16 +1,36 @@
 const crypto = require("crypto");
-const nodemailer = require("nodemailer");
-const sendgridTransport = require("nodemailer-sendgrid-transport");
+// const nodemailer = require("nodemailer");
+// const sendgridTransport = require("nodemailer-sendgrid-transport");
 const TokenEmailVerification = require("../models/TokenEmailVerification");
 require("dotenv").config();
+
+const sgMail = require("@sendgrid/mail");
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+// const msg = {
+//   to: "danieln0014@gamil.com", // Change to your recipient
+//   from: "danieln@newground.net.au", // Change to your verified sender
+//   subject: "Sending with SendGrid is Fun",
+//   text: "and easy to do anywhere, even with Node.js",
+//   html: "<strong>and easy to do anywhere, even with Node.js</strong>",
+// };
+// sgMail
+//   .send(msg)
+//   .then(() => {
+//     console.log("Email sent");
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
+
 //create nodemailer transport with sendgrid api key
-const transporter = nodemailer.createTransport(
-  sendgridTransport({
-    auth: {
-      api_key: process.env.SENDGRID_API_KEY,
-    },
-  })
-);
+// const transporter = nodemailer.createTransport(
+//   sendgridTransport({
+//     auth: {
+//       api_key: process.env.SENDGRID_API_KEY,
+//     },
+//   })
+// );
 
 module.exports = {
   // generate a token for email verification
@@ -32,19 +52,18 @@ module.exports = {
       subject: "Smart-Cube - Account Verification Link",
       text:
         "Hello " +
-          username +
-          ",\n\n" +
-          "Please verify your account by clicking the link: \n" +
-          process.env.APP_DOMAIN ||
-        "TEST" +
-          slash +
-          "verify?email=" +
-          email +
-          "&token=" +
-          token.token +
-          "&id=" +
-          userId +
-          "\n\nThank You!\n",
+        username +
+        ",\n\n" +
+        "Please verify your account by clicking the link: \n" +
+        process.env.APP_DOMAIN +
+        slash +
+        "verify?email=" +
+        email +
+        "&token=" +
+        token.token +
+        "&id=" +
+        userId +
+        "\n\nThank You!\n",
     };
   },
   //create options object for password reset email
@@ -55,18 +74,21 @@ module.exports = {
       subject: "Smart-cube - Reset Password",
       text:
         "Hello " +
-          username +
-          ",\n\n" +
-          "Your password has been changed to: " +
-          newPw +
-          "\n\n" +
-          "Click here to login: \n" +
-          process.env.APP_DOMAIN || "TEST" + "/login" + "\n\nThank You!\n",
+        username +
+        ",\n\n" +
+        "Your password has been changed to: " +
+        newPw +
+        "\n\n" +
+        "Click here to login: \n" +
+        process.env.APP_DOMAIN +
+        "/login" +
+        "\n\nThank You!\n",
     };
   },
+
   //send email with options provided
   sendEmail: function (emailOptions) {
-    return transporter.sendMail(emailOptions);
+    return sgMail.sendMail(emailOptions);
   },
   //generate a random password
   //https://stackoverflow.com/questions/1497481/javascript-password-generator
