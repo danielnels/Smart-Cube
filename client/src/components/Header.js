@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
 import { useSelector } from "react-redux";
+import * as React from "react";
 
 const Header = ({ toTop }) => {
   //get current logged in user data from redux store for conditional nav bar

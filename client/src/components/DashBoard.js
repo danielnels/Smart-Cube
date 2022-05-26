@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HomeRight from "./HomeRight/HomeRight";
 import HomeLeft from "./HomeLeft/HomeLeft";
+import { Container } from "@material-ui/core";
 import "./Dashboard.css";
 require("dotenv").config();
 
@@ -27,7 +28,6 @@ const Dashboard = () => {
     getCurrentLocation();
   }, []);
   return (
-    
     <div className="dashboard">
       <div className="home-left">
         <HomeLeft temperature={temperature} humidity={humidity} />
