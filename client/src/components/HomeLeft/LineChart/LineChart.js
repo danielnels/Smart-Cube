@@ -44,7 +44,7 @@ class LineChart extends Component {
           ],
           xaxis: [
             {
-              x: new Date("2 May 2022").getTime(),
+              x: new Date("2 May 2021").getTime(),
               borderColor: "#999",
               yAxisIndex: 0,
               label: {
@@ -67,7 +67,7 @@ class LineChart extends Component {
         },
         xaxis: {
           type: "datetime",
-          min: new Date("25 May 2022").getTime(),
+          min: new Date("2 May 2021").getTime(),
           tickAmount: 6,
         },
         tooltip: {

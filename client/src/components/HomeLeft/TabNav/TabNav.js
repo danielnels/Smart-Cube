@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import WeatherMap from "../WeatherMap/WeatherMap";
 import MoistureData from "../MoistureData/MoistureData";
+import Valves from "../Valves";
 import "./TabNav.css";
 
 function TabPanel(props) {
@@ -71,7 +72,10 @@ function TabNav({ temperature, humidity }) {
           textColor="inherit"
           aria-label="scrollable force tabs example"
         >
-          <Tab label="Home" {...a11yProps(0)} className="tabName" />
+          <Tab label="Weather Sanpshot" {...a11yProps(0)} className="tabName" />
+
+          <Tab label="Moisture Data" {...a11yProps(1)} className="tabName" />
+          <Tab label="Valve" {...a11yProps(2)} className="tabName" />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0} className="tab">
@@ -80,9 +84,9 @@ function TabNav({ temperature, humidity }) {
       <TabPanel value={value} index={1} className="tab">
         <MoistureData />
       </TabPanel>
-      {/* <TabPanel value={value} index={2} className="tab">
-        <Earthquake />
-      </TabPanel> */}
+      <TabPanel value={value} index={2} className="tab">
+        <Valves />
+      </TabPanel>
     </div>
   );
 }

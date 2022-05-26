@@ -27,6 +27,7 @@ const Dashboard = () => {
     getCurrentLocation();
   }, []);
   return (
+    
     <div className="dashboard">
       <div className="home-left">
         <HomeLeft temperature={temperature} humidity={humidity} />
