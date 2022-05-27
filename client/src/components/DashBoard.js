@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HomeRight from "./HomeRight/HomeRight";
 import HomeLeft from "./HomeLeft/HomeLeft";
-import { Container } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import "./Dashboard.css";
 require("dotenv").config();
 
@@ -29,12 +29,18 @@ const Dashboard = () => {
   }, []);
   return (
     <div className="dashboard">
-      <div className="home-left">
-        <HomeLeft temperature={temperature} humidity={humidity} />
-      </div>
-      <div className="home-right">
-        <HomeRight />
-      </div>
+      <Grid container spacing={3}>
+        {/* <div className="home-left"> */}
+        <Grid item xs={8}>
+          <HomeLeft temperature={temperature} humidity={humidity} />
+        </Grid>
+        {/* </div> */}
+        {/* <div className="home-right"> */}
+        <Grid item xs>
+          <HomeRight />
+        </Grid>
+        {/* </div> */}
+      </Grid>
     </div>
   );
 };

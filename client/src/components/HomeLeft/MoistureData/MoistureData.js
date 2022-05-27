@@ -106,8 +106,8 @@ class MoistureData extends Component {
         options={this.state.options}
         series={this.state.series}
         type="area"
-        width={800}
-        height={520}
+        width={1200}
+        height={850}
       />
     );
   }
