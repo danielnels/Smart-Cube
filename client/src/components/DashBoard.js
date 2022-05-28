@@ -27,7 +27,7 @@ const Dashboard = () => {
     getCurrentLocation();
   }, []);
   return (
-    <div className="dashboard">
+    <div className="dboard">
       <Grid container spacing={3}>
         <Grid item xs={8}>
           <HomeLeft temperature={temperature} humidity={humidity} />

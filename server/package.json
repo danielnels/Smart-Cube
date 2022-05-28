@@ -12,6 +12,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@sendgrid/mail": "^7.7.0",
         "apollo-server-express": "^3.4.0",
         "bcrypt": "^5.0.1",
         "cors": "^2.8.5",
@@ -25,7 +26,6 @@
         "mongoose": "^6.0.10",
         "nodemailer": "^6.7.0",
         "nodemailer-sendgrid-transport": "^0.2.0"
-       
     },
     "devDependencies": {
         "nodemon": "^2.0.13"
