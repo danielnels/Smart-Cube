@@ -7,7 +7,7 @@ import Login from "./components/Login";
 import VerifyEmail from "./components/VerifyEmail";
 import Error from "./components/Error";
 import ForgotPassword from "./components/ForgotPassword";
-import Dashboard from "./components/Dashboard";
+// import Dashboard from "./components/Dashboard";
 import Auth from "./utils/auth";
 import { useEffect } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
@@ -79,9 +79,9 @@ function App() {
               <ForgotPassword bgColor={mainColor} />
             </Route>
 
-            <Route exact path="/dashboard">
+            {/* <Route exact path="/dashboard">
               <Dashboard bgColor={mainColor} />
-            </Route>
+            </Route> */}
 
             <Route path="/404">
               <NotFound bgColor={mainColor} />
