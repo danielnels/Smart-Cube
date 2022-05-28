@@ -5,7 +5,7 @@ import { Grid } from "@material-ui/core";
 import "./Dashboard.css";
 
 const API_KEY = "9d3f8d0c8e62e5ad4c7157553bc15108";
-const Dashboard = () => {
+const DashBoard = () => {
   const [temperature, setTemperature] = useState(0);
   const [humidity, setHumidity] = useState(0);
 
@@ -41,4 +41,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashBoard;

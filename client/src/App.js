@@ -7,7 +7,7 @@ import Login from "./components/Login";
 import VerifyEmail from "./components/VerifyEmail";
 import Error from "./components/Error";
 import ForgotPassword from "./components/ForgotPassword";
-import Dashboard from "./components/Dashboard";
+import DashBoard from "./components/DashBoard";
 import Auth from "./utils/auth";
 import { useEffect } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
@@ -80,7 +80,7 @@ function App() {
             </Route>
 
             <Route exact path="/dashboard">
-              <Dashboard bgColor={mainColor} />
+              <DashBoard bgColor={mainColor} />
             </Route>
 
             <Route path="/404">
