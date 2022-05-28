@@ -2,12 +2,12 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import InfoModal from "./components/InfoModal";
 import Home from "./components/Home";
-import Dashboard from "./components/Dashboard";
 import NotFound from "./components/NotFound";
 import Login from "./components/Login";
 import VerifyEmail from "./components/VerifyEmail";
 import Error from "./components/Error";
 import ForgotPassword from "./components/ForgotPassword";
+import Dashboard from "./components/Dashboard";
 import Auth from "./utils/auth";
 import { useEffect } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
@@ -80,9 +80,7 @@ function App() {
             </Route>
 
             <Route exact path="/dashboard">
-              {/* <ProtectedRoute> */}
               <Dashboard bgColor={mainColor} />
-              {/* </ProtectedRoute> */}
             </Route>
 
             <Route path="/404">
