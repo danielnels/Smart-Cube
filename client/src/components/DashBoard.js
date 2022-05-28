@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import HomeRight from "./HomeRight/HomeRight";
 import HomeLeft from "./HomeLeft/HomeLeft";
 import { Grid } from "@material-ui/core";
-import "./Dashboard.css";
+import "./DashBoard.css";
 
 const API_KEY = "9d3f8d0c8e62e5ad4c7157553bc15108";
 const DashBoard = () => {
