@@ -9,12 +9,12 @@ class MoistureData extends Component {
       series: [
         {
           data: [
-            [1619848800000, 31],
-            [1619913600000, 30.12],
-            [1620000000000, 33.21],
-            [1620086400000, 31],
-            [1620172800000, 34.31],
-            [1620259200000, 32.12],
+            [1619848800000, 10],
+            [1619913600000, 15],
+            [1620000000000, 10],
+            [1620086400000, 15],
+            [1620172800000, 10],
+            [1620259200000, 15],
           ],
         },
       ],
@@ -22,7 +22,7 @@ class MoistureData extends Component {
         chart: {
           id: "area-datetime",
           type: "area",
-          height: 350,
+          height: 150,
           zoom: {
             autoScaleYaxis: true,
           },
@@ -30,7 +30,7 @@ class MoistureData extends Component {
         annotations: {
           yaxis: [
             {
-              y: 30,
+              y: 5,
               borderColor: "whitesmoke",
               label: {
                 show: true,
@@ -49,7 +49,7 @@ class MoistureData extends Component {
               yAxisIndex: 0,
               label: {
                 show: true,
-                text: "Temperature",
+                text: "Soil Moisture",
                 style: {
                   color: "white",
                   background: "transparent",
@@ -106,8 +106,8 @@ class MoistureData extends Component {
         options={this.state.options}
         series={this.state.series}
         type="area"
-        width={1200}
-        height={850}
+        width={1100}
+        height={750}
       />
     );
   }

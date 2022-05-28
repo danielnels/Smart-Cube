@@ -2,7 +2,10 @@
 .error-feedback {
     color: red !important;
 }
-
+.navbar-dark .navbar-brand {
+   
+    font-size: x-large;
+}
 .grecaptcha-badge {
     visibility: hidden;
 }

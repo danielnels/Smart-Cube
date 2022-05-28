@@ -9,7 +9,7 @@ function Valves(props) {
     <MuiPickersUtilsProvider utils={MomentUtils}>
       <div className="App-wraper"></div>
       <div className="valves-main-wraper">
-        <header className="page-header">valves</header>
+        <header className="page-header"></header>
         <div className="valves-wraper">
           <br />
           <br />

@@ -4,6 +4,7 @@
   /* justify-content: center; */
   /* justify-items: center; */
   align-items: center;
+  color: rgb(255, 255, 255);
 }
 
 @media screen and (min-width: 480px) {

@@ -30,16 +30,13 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <Grid container spacing={3}>
-        {/* <div className="home-left"> */}
         <Grid item xs={8}>
           <HomeLeft temperature={temperature} humidity={humidity} />
         </Grid>
-        {/* </div> */}
-        {/* <div className="home-right"> */}
         <Grid item xs>
           <HomeRight />
         </Grid>
-        {/* </div> */}
+        \
       </Grid>
     </div>
   );

@@ -10,7 +10,7 @@
 .valveItem-wraper {
   /* display: flex; */
   /* flex-direction: column; */
-  color: black;
+  color: rgb(252, 249, 249);
   height: auto;
   width: 100%;
   box-shadow: 1px 1px 3px 1px #888888;

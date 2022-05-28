@@ -28,14 +28,10 @@ const Footer = ({ toTop }) => {
                   ) : (
                     <>
                       <li className="nav-item">
-                        <Link className="nav-link" to="/signup">
-                          Sign Up
-                        </Link>
+                        <Link className="nav-link" to="/signup"></Link>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" to="/login">
-                          Login
-                        </Link>
+                        <Link className="nav-link" to="/login"></Link>
                       </li>
                     </>
                   )}

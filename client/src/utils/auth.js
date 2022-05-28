@@ -5,9 +5,9 @@ import { userActions } from "../redux/actions/";
 
 class AuthService {
   // get user data from encoded token
-  // getProfile() {
-  //     return decode(this.getToken());
-  // }
+  getProfile() {
+    return decode(this.getToken());
+  }
 
   // check if user's logged in
   loggedIn() {

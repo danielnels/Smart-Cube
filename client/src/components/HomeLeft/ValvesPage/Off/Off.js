@@ -1,20 +1,20 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 
-function Off () {
-  let [displayStyle, setDisplayStyle] = useState('none')
+function Off() {
+  let [displayStyle, setDisplayStyle] = useState("none");
   const changeStyle = () => {
-    console.log('Off clicked')
-  }
+    console.log("Off clicked");
+  };
 
   return (
     <div>
-        <button onClick={changeStyle}>Freez irrgation</button>
+      <button onClick={changeStyle}>Pause irrgation</button>
       <form>
-        <button style={{display: displayStyle}}>Freez</button>
+        <button style={{ display: displayStyle }}>Pause</button>
         <button>resume</button>
       </form>
     </div>
-  )
+  );
 }
 
-export default Off
+export default Off;

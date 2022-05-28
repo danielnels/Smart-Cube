@@ -5,7 +5,7 @@ const HomeHero = (params) => {
   return (
     <>
       <section
-        className="bg-blue"
+        className="bg-green"
         ref={(el) => {
           if (el) {
             el.style.setProperty("background-color", bgColor, "important");
