@@ -4,7 +4,7 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 import { Modal } from "@material-ui/core";
 
-const API_KEY = "9d3f8d0c8e62e5ad4c7157553bc15108";
+const API_KEY = process.env.REACT_APP_WEATHER_API;
 
 const HomeRight = () => {
   const [locationName, setLocationName] = useState("");

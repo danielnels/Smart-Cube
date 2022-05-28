@@ -4,7 +4,7 @@ import HomeLeft from "./HomeLeft/HomeLeft";
 import { Grid } from "@material-ui/core";
 import "./DashBoard.css";
 
-const API_KEY = "9d3f8d0c8e62e5ad4c7157553bc15108";
+const API_KEY = process.env.REACT_APP_WEATHER_API;
 const DashBoard = () => {
   const [temperature, setTemperature] = useState(0);
   const [humidity, setHumidity] = useState(0);
