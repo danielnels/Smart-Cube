@@ -70,11 +70,19 @@ Run the app
 
 
 
+https://user-images.githubusercontent.com/94213022/170851033-42bad139-1450-47bf-8211-fb0fe00f8a71.mp4
+
+
+
 
 
 ## App Images
+![Screen 1](https://user-images.githubusercontent.com/94213022/170851044-54698e92-b0cf-4181-8a2c-06d8606cc5e1.png)
 
+![screen 2](https://user-images.githubusercontent.com/94213022/170851046-40b8b257-e590-4272-8e62-9b43f5211037.png)
 
+![screen 3](https://user-images.githubusercontent.com/94213022/170851048-a02691a6-003e-4098-8524-deafd78b1c88.png)
+![screen 4](https://user-images.githubusercontent.com/94213022/170851069-8ffb723a-f1b7-494f-a8de-524e5c588ccf.png)
 
 ## Deployed Application Links
 Git Hub:https://github.com/danielnels/Smart-Cube.git
