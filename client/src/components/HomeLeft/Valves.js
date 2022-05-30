@@ -15,7 +15,7 @@ function Valves(props) {
           <br />
 
           <div className="valves-list-wraper">
-            <h3>Valves List</h3>
+            <h3>Station List</h3>
           </div>
           <div className="valves-items-wraper">
             <ValveItem number={1} />

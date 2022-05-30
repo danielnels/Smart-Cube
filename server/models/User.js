@@ -19,7 +19,7 @@ const userSchema = new Schema({
   },
   isVerified: { type: Boolean, default: true },
 });
-//use timestamp fields for this model
+
 userSchema.set("timestamps", true);
 
 // hash user password
