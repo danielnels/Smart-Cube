@@ -1,25 +1,25 @@
-import React, { useState } from 'react'
-import '../ValveItem/valve-style.css'
+import React, { useState } from "react";
+import "../ValveItem/valve-style.css";
 // import BasicTimePicker from '../BasicTimePicker'
-import Cycles from './Cycles'
+import Cycles from "./Cycles";
 
-function CyclesWraper (props) {
-  let [displayStyle, setDisplayStyle] = useState('none')
+function CyclesWraper(props) {
+  let [displayStyle, setDisplayStyle] = useState("none");
   const cycles = () => {
-    displayStyle === 'none' ? setDisplayStyle('block') : setDisplayStyle('none')
-    console.log('Cycles clicked!!!!')
-  }
+    displayStyle === "none"
+      ? setDisplayStyle("block")
+      : setDisplayStyle("none");
+    console.log("Cycles clicked!!!!");
+  };
 
   return (
     <div>
       <button onClick={cycles}>Cycles</button>
-      <div className='cycles-valva-1' style={{ display: displayStyle }}>
-        {/* <form> */}
-          <Cycles />
-        {/* </form> */}
+      <div className="cycles-valva-1" style={{ display: displayStyle }}>
+        <Cycles />
       </div>
     </div>
-  )
+  );
 }
 
-export default CyclesWraper
+export default CyclesWraper;

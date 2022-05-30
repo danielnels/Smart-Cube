@@ -1,16 +1,16 @@
-import React from 'react'
-import '../ValveItem/valve-style.css'
-import BasicTimePicker from '../BasicTimePicker'
+import React from "react";
+import "../ValveItem/valve-style.css";
+import BasicTimePicker from "../BasicTimePicker";
 
-function Cycles () {
+function Cycles() {
   const cycles = () => {
-    console.log('Cycles clicked')
-  }
+    console.log("Cycles clicked");
+  };
 
   return (
-    <div className=''>
-      {/* <button onClick={cycles}>Cycles</button> */}
-      <div className='cycles-valva-1' style={{ display: 'block' }}>
+    <div className="">
+      <button onClick={cycles}>Cycles</button>
+      <div className="cycles-valva-1" style={{ display: "block" }}>
         <form>
           <section>
             <label>Period 1</label>
@@ -19,7 +19,7 @@ function Cycles () {
                 <label>
                   Start time:
                   <div>
-                    <BasicTimePicker cycleMode='start' />
+                    <BasicTimePicker cycleMode="start" />
                   </div>
                   {/* <input type='time' name='start-1' /> */}
                 </label>
@@ -29,7 +29,7 @@ function Cycles () {
                 <label>
                   End time:
                   <div>
-                    <BasicTimePicker cycleMode='end' />
+                    <BasicTimePicker cycleMode="end" />
                   </div>
                   {/* <input type='time' name='start-2' /> */}
                 </label>
@@ -39,7 +39,7 @@ function Cycles () {
                 <label>
                   Cycle duration:
                   <div>
-                    <BasicTimePicker cycleMode='duration' />
+                    <BasicTimePicker cycleMode="duration" />
                   </div>
                   {/* <input type='time' name='start-2' /> */}
                 </label>
@@ -60,7 +60,7 @@ function Cycles () {
         </form>
       </div>
     </div>
-  )
+  );
 }
 
-export default Cycles
+export default Cycles;

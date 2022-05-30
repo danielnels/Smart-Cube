@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { TimePicker } from "@material-ui/pickers";
 
 function BasicTimePicker(props) {
-  // const [time, setTime] = useState()
   const [date, handleDateChange] = useState("0");
 
   return (

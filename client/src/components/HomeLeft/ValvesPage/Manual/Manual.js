@@ -1,19 +1,21 @@
-import React, { useState } from 'react'
-// import './valve-style.css'
-import BasicTimePicker from '../BasicTimePicker'
+import React, { useState } from "react";
 
-function Manual (props) {
-  let [displayStyle, setDisplayStyle] = useState('none')
+import BasicTimePicker from "../BasicTimePicker";
+
+function Manual(props) {
+  let [displayStyle, setDisplayStyle] = useState("none");
   const manual = () => {
-    displayStyle === 'none' ? setDisplayStyle('block') : setDisplayStyle('none')
+    displayStyle === "none"
+      ? setDisplayStyle("block")
+      : setDisplayStyle("none");
 
-    console.log('Manual clicked')
-  }
+    console.log("Manual clicked");
+  };
 
   return (
-    <div className=''>
+    <div className="">
       <button onClick={manual}>Manual</button>
-      <div className='manual-valva-1' style={{ display: displayStyle }}>
+      <div className="manual-valva-1" style={{ display: displayStyle }}>
         <form>
           <section>
             <label>
@@ -21,7 +23,6 @@ function Manual (props) {
               <div>
                 <BasicTimePicker />
               </div>
-              {/* <input type='time' name='start-1' /> */}
             </label>
           </section>
           <button>Start</button>
@@ -29,7 +30,7 @@ function Manual (props) {
         </form>
       </div>
     </div>
-  )
+  );
 }
 
-export default Manual
+export default Manual;
